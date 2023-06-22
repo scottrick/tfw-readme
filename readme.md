@@ -1,3 +1,9 @@
+#### todo
+* finish formatting
+* Add table of contents.
+* Re-order sections so they are organized better.
+* replace "Meaningless" with -
+
 # File
 ### Preferences
 #### Full Path and Name for TIE Fighter Program File
@@ -230,6 +236,7 @@ This is the flight group editor of the TIE Fighter Mission Builder. Double click
 ### Messages Tab
 This sheet is the message editor. Double click a message to edit it. Create and delete messages using the menu commands Messages | New Message and Messages | Delete Message or by pressing insert and delete. Clicking the new button creates a new message, while clicking the delete or duplicate buttons will delete or duplicate the selected message. You can also select multiple messages and use the cut/copy/paste commands between mission files or in the same mission file.
 ### Briefing Tab
+**TODO**: format this!
 Note: It is generally a good idea to maximize both the TIE Fighter Mission Builder window as well as the mission window when working with briefings. This will increase the accuracy of the locations of items displayed on the map.
 
 Briefing Events
@@ -282,8 +289,8 @@ The following list of orders is fairly complete and a great amount of effort has
 | --- | --- |
 | Movement | Stationary. | 
 | Defense | Turreted ships will return fire if fired upon. Non turreted ships will ignore all attacks. | 
-| Value 1| Meaningless. | 
-| Value 2| Meaningless. | 
+| Value 1 | Meaningless. | 
+| Value 2 | Meaningless. | 
 | Targets | No effect. | 
 | Action when complete | This order is never considered completed. | 
 | Notes | Hold Station will ONLY work if it is the FIRST order.  If this order is the second or third order, the ship will go to its hyperspace point/mothership instead. | 
@@ -292,102 +299,121 @@ The following list of orders is fairly complete and a great amount of effort has
 | --- | --- |
 | Movement | Heads directly to hyperspace point or mothership. | 
 | Defense | Ignores all attacks. | 
-| Value 1| Meaningless. | 
-| Value 2| Meaningless. | 
+| Value 1 | Meaningless. | 
+| Value 2 | Meaningless. | 
 | Targets | No effect. | 
 | Action when complete | Ship will have left mission if this order is successfully completed. | 
-| Notes | None. | 
+| Notes | None | 
 ### Circle 
 | Label | Description |
 | --- | --- |
 | Movement | Circles through designated waypoints. | 
 | Defense | Turreted ships will return fire if fired upon - Non turreted ships will ignore all attacks. | 
-| Value 1| If set to 0, ship will head straight to hyperspace point/mothership. Otherwise, this is the number of times ship will circle through waypoints before this order is considered successfully completed. | 
-| Value 2| Meaningless. | 
+| Value 1 | If set to 0, ship will head straight to hyperspace point/mothership. Otherwise, this is the number of times ship will circle through waypoints before this order is considered successfully completed. | 
+| Value 2 | Meaningless. | 
 | Targets | No effect. | 
 | Action when complete | Ship will go to hyperspace point/mothership. | 
-| Notes | None. | 
+| Notes | None | 
 ### Circle and Evade 
 | Label | Description |
 | --- | --- |
 | Movement | Circles through designated waypoints, making evasive maneuvers if fired upon. | 
 | Defense | Turreted ships will return fire if fired upon - Non turreted ships will ignore all attacks. | 
-| Value 1| If set to 0, ship will head straight to hyperspace point/mothership. Otherwise, this is the number of times ship will circle through waypoints before this order is considered successfully completed. | 
-| Value 2| Meaningless. | 
+| Value 1 | If set to 0, ship will head straight to hyperspace point/mothership. Otherwise, this is the number of times ship will circle through waypoints before this order is considered successfully completed. | 
+| Value 2 | Meaningless. | 
 | Targets | No effect. | 
 | Action when complete | Ship will go to hyperspace point/mothership. | 
-| Notes | None. | 
+| Notes | None | 
 ### Rendezvous 
 | Label | Description |
 | --- | --- |
 | Movement | Flies directly to designated rendezvous waypoint, then waits for boarding. | 
 | Defense | Turreted ships will return fire if fired upon - Non turreted ships will ignore all attacks. | 
-| Value 1| If set to 0, ship will head to its rendezvous point, and then straight to hyperspace point/mothership. Otherwise, this is the number of times ship must be docked with before this order is considered successfully completed. | 
-| Value 2| Meaningless. | 
+| Value 1 | If set to 0, ship will head to its rendezvous point, and then straight to hyperspace point/mothership. Otherwise, this is the number of times ship must be docked with before this order is considered successfully completed. | 
+| Value 2 | Meaningless. | 
 | Targets | No effect. | 
 | Action when complete | Ship will go to hyperspace point/mothership. | 
-| Notes | None. | 
+| Notes | None | 
 ### Awaiting Boarding (Disabled) I & II
 | Label | Description |
 | --- | --- |
 | Movement | Stationary (systems at 0%). | 
 | Defense | Turreted ships will return fire if fired upon - Non turreted ships will ignore all attacks. | 
-| Value 1| If set to 0, this order will never be successfully completed. Otherwise, this is the number of times this ship must be docked with for this order to be considered successfully completed. | 
-| Value 2| Meaningless. | 
+| Value 1 | If set to 0, this order will never be successfully completed. Otherwise, this is the number of times this ship must be docked with for this order to be considered successfully completed. | 
+| Value 2 | Meaningless. | 
 | Targets | No effect. | 
 | Action when complete | Ship will go to hyperspace point/mothership (systems at 100%). | 
 | Notes | Awaiting Boarding (Disabled) I & II appear to function identically. | 
-
-Attack Target    Movement: Patrols designated waypoints, or acquires and attacks all targets present.
-         Defense: unsure, will test soon...
-         Value 1: Meaningless.
-         Value 2: Meaningless.
-         Targets Designated: Ship will attack any and all targets designated here. If the mission has NO targets of this type at any time, or if all the designated targets have been destroyed, this order is considered successfully completed.
-         Action when order completed: Ship will go to next order.
-         Notes: None
-
-Attack Escorters         Movement: Patrols designated waypoints, or acquires and attacks all targets with escort orders present.
-         Defense: unsure, will test soon...
-         Value 1: Meaningless.
-         Value 2: Meaningless.
-         Targets Designated: Ship will attack any and all targets designated here IF THEY HAVE ESCORT ORDERS. If the mission has NO targets of this type at any time, or if all the designated targets have been destroyed, this order is considered successfully completed.
-         Action when order completed: Ship will go to next order.
-         Notes: If a ship with this order has been patrolling its waypoints, and then a ship of the designated target type arrives, with or without escort orders, the patrolling ship will then move to its next order WITHOUT attacking the designated targets. Use two of these orders one right after the other to solve this problem, and I'm still trying to figure this out.
-
-Protect  Movement: Patrols designated waypoints, or acquires and attacks all ships attacking its designated targets.
-         Defense: Turreted ships will return fire if fired upon - Non turreted ships will ignore all attacks.
-         Value 1: Meaningless.
-         Value 2: Meaningless.
-         Targets Designated: Ship will attack any and all ships that are ATTACKING the targets designated here.
-         Action when order completed: This order is never considered completed (I think).
-         Notes: It is my humble opinion that you should use this order instead of Escort whenever possible, as it seems to work better.
-
-Escort   Movement: Flies alongside designated targets, or acquires and attacks ships attacking targets.
-         Defense: unsure, will test soon...
-         Value 1: Meaningless.
-         Value 2: Designates this ship to attack PLAYER CRAFT by default, at almost all times.
-         Targets Designated: Ship will attack any and all ships that are ATTACKING the targets designated here, EXCEPT if the attacker is the PLAYERS CRAFT, in which case s/he will be ignored. Use Value 2 to solve this problem.
-         Action when order completed: This order is never considered completed.
-         Notes: Protect seems to work much better than this order.
-
-Disable Target   Movement: Patrols designated waypoints, or acquires and attacks with intent to disable designated targets.
-         Defense: unsure, will test soon...
-         Value 1: Meaningless.
-         Value 2: Meaningless.
-         Targets Designated: Ship will attack, with intent to disable, all ships designated here. It will use its missiles to lower shields, but will NOT fire their normal blasters. Ships without ion cannons will set up for attack runs, but will not fire their normal blasters.
-         Action when order completed: Ship will go to next order.
-         Notes: None
-
-Board and Give/Take/Exg/Capt/Con         Movement: Stationary, or flies to designated targets.
-         Defense: Turreted ships will return fire if fired upon - Non turreted ships will ignore all attacks.
-         Value 1: Time (x5) in seconds that will be required to complete a successful boarding.
-         Value 2: Number of times to dock, I think... unsure exactly what it does, still.
-         Targets Designated: Ship will fly to all ships designated here and dock with them, so long as they are stationary (NOT Wait). If the target does not exist at all in the mission, or upon the successful completion of all boarding operations, this order is considered successfully completed.
-         Action when order completed: Ship will go to next order.
-         Notes: Experiment with this order somewhat, it isn't too hard to get to work properly but sometimes takes a little meddling. Ships that HAVE BEEN boarded act as follows:
-         If it was holding station, it will continue to do so indefinitely.
-         If it was Awaiting Boarding (Disabled), it will either go to its hyperspace point/mothership, or remain disabled, depending on the number of boardings required as set in the orders for that ship. It does NOT go to its next order.
-         If it was disabled in combat, it will then automatically go to its hyperspace point/mothership. It does NOT go to its next order.
+### Attack Target 
+| Label | Description |
+| --- | --- |
+| Movement | Patrols designated waypoints, or acquires and attacks all targets present. |
+| Defense | Unknown | 
+| Value 1 | Meaningless. | 
+| Value 2 | Meaningless. | 
+| Targets | Ship will attack any and all targets designated here. If the mission has NO targets of this type at any time, or if all the designated targets have been destroyed, this order is considered successfully completed. |
+| Action when complete | Ship will go to next order. |
+| Notes | None |
+### Attack Escorters
+| Label | Description |
+| --- | --- |
+| Movement | Patrols designated waypoints, or acquires and attacks all targets with escort orders present. |
+| Defense | Unknown | 
+| Value 1 | Meaningless. | 
+| Value 2 | Meaningless. | 
+| Targets | Ship will attack any and all targets designated here IF THEY HAVE ESCORT ORDERS. If the mission has NO targets of this type at any time, or if all the designated targets have been destroyed, this order is considered successfully completed. |
+| Action when complete | Ship will go to next order. |
+| Notes | If a ship with this order has been patrolling its waypoints, and then a ship of the designated target type arrives, with or without escort orders, the patrolling ship will then move to its next order WITHOUT attacking the designated targets. Use two of these orders one right after the other to solve this problem, and I'm still trying to figure this out. |
+### Protect
+| Label | Description |
+| --- | --- |
+| Movement | Patrols designated waypoints, or acquires and attacks all ships attacking its designated targets. |
+| Defense | Turreted ships will return fire if fired upon - Non turreted ships will ignore all attacks. |
+| Value 1 | Meaningless. | 
+| Value 2 | Meaningless. | 
+| Targets | Ship will attack any and all ships that are ATTACKING the targets designated here. |
+| Action when complete | This order is never considered completed (I think). |
+| Notes | It is my humble opinion that you should use this order instead of Escort whenever possible, as it seems to work better. |
+### Escort
+| Label | Description |
+| --- | --- |
+| Movement | Flies alongside designated targets, or acquires and attacks ships attacking targets. |
+| Defense | Unknown |
+| Value 1 | Meaningless. | 
+| Value 2 | Designates this ship to attack PLAYER CRAFT by default, at almost all times. |
+| Targets | Ship will attack any and all ships that are ATTACKING the targets designated here, EXCEPT if the attacker is the PLAYERS CRAFT, in which case s/he will be ignored. Use Value 2 to solve this problem. |
+| Action when complete | This order is never considered completed. |
+| Notes | Protect seems to work much better than this order. |
+### Disable Target
+| Label | Description |
+| --- | --- |
+| Movement | Patrols designated waypoints, or acquires and attacks with intent to disable designated targets. |
+| Defense | Unknown |
+| Value 1 | Meaningless. | 
+| Value 2 | Meaningless. | 
+| Targets | Ship will attack, with intent to disable, all ships designated here. It will use its missiles to lower shields, but will NOT fire their normal blasters. Ships without ion cannons will set up for attack runs, but will not fire their normal blasters. |
+| Action when complete | Ship will go to next order. |
+| Notes | None |
+### Board and Give/Take/Exg/Capt/Con
+| Label | Description |
+| --- | --- |
+| Movement | Stationary, or flies to designated targets. |
+| Defense | Turreted ships will return fire if fired upon - Non turreted ships will ignore all attacks. |
+| Value 1 | Time (x5) in seconds that will be required to complete a successful boarding. |
+| Value 2 | Number of times to dock, I think... unsure exactly what it does, still. |
+| Targets | Ship will fly to all ships designated here and dock with them, so long as they are stationary (NOT Wait). If the target does not exist at all in the mission, or upon the successful completion of all boarding operations, this order is considered successfully completed. |
+| Action when complete | Ship will go to next order. |
+| Notes | Experiment with this order somewhat, it isn't too hard to get to work properly but sometimes takes a little meddling. Ships that HAVE BEEN boarded act as follows: If it was holding station, it will continue to do so indefinitely.  If it was Awaiting Boarding (Disabled), it will either go to its hyperspace point/mothership, or remain disabled, depending on the number of boardings required as set in the orders for that ship. It does NOT go to its next order.  If it was disabled in combat, it will then automatically go to its hyperspace point/mothership. It does NOT go to its next order. |
+### OrderName
+| Label | Description |
+| --- | --- |
+| Movement |
+| Defense | 
+| Value 1 | Meaningless. | 
+| Value 2 | Meaningless. | 
+| Targets | 
+| Action when complete | 
+| Notes | None |
 
 Pick Up Craft    Movement: Stationary, or flies to designated targets.
          Defense: Turreted ships will return fire if fired upon - Non turreted ships will ignore all attacks.
@@ -586,42 +612,5 @@ Galaxy Bitmap
 The galaxy bitmap is displayed on the large screen in the center of the New Battle/Change Battle room on the main TIE Fighter concourse. When the currently selected battle is changed, a small rectangle of the galaxy is highlighted and enlarged to show the "battle bitmap." You can move and resize the red rectangle in TFW to change where the rectangle appears in TIE Fighter and how large it will be.
 
 
-
-
-
-
 # About
-TIE Fighter Workshop
-Copyright 1996 Evan Sabatelli
-All Rights Reserved.
-
-The TIE Fighter Workshop is a mission, battle, and pilot editor for the LucasArts game TIE Fighter. The TIE Fighter Workshop currently supports almost all features of the original game, the Defender of the Empire add-on, and the CD version. The program allows you to create from scratch anything that you can edit. Features include a graphical waypoint editor, and WYSIWYG briefing editor, complete battle editor, and a pilot editor.
-
-         Creating a new mission   Learn to create a new mission from scratch through those nifty Windows 95 stay-on-top procedural help dialogs. Click Contents, then open the Step-by-Step Procedures heading, click Creating a new mission. The program will guide you through the creation of a simple mission.
-         Creating a new battle    Learn to create a new battle as described above.
-         Credits and Special Thanks       All the people that helped out.
-
-NOTE: In the event that something does not work, assume that it is because I have been too lazy to implement it just yet. They will be implemented sometime :)
-
-Disclaimer
-
-THIS SOFTWARE AND ALL ACCOMPANYING FILES ARE PROVIDED "AS IS" WITHOUT ANY WARRANTY, EXPRESS OR IMPLIED. THIS INCLUDES, BUT IS NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
-
-IN NO EVENT SHALL EVAN SABATELLI BE LIABLE FOR ANY DAMAGES WHATSOEVER ARISING OUT OF THE USE OR INABILITY TO USE THIS PRODUCT.
-
-Legal Stuff
-
-TIE Fighter is a registered trademark by LucasArts Entertainment Company and is Copyright (C) 1994. LucasArts is a trademark of the LucasArts entertainment company. Windows and Windows 95 are trademarks of the Microsoft Corporation. All other trademarks are acknowledged as the property of their respective owners.
-#Credits and Special Thanks
-
-Thanks to Alexei Novikov (anoviko@emory.edu) for help with LFD files and the DELT resources! The battle editor could not have been completed without the help!
-
-Thanks to Jason Blackston (jakor@execpc.com) for the info on pilot files, as well as numerous suggestions!
-
-Extra thanks to Keith Howe (rikhowe@sisna.com) for the amazing amount of work on everything and all the suggestions! This program would be without formation pictures, descriptions of orders, and many other features.
-
-Thanks to everyone who e-mailed suggestions and encouragements. This project would not have come this far without you!
-#Creating a TIE Fighter Mission
-
-Coming soon! At least you know I'm thinking about it :)
-
+**TIE Fighter Workshop** was created by **Evan Sabatelli**.
